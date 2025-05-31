@@ -171,22 +171,21 @@
             </p>
           </div>
           <div class="col-lg-6">
-            <form id="newsletter-form" action="https://formspree.io/f/xeokjvdk" method="POST" novalidate>
-              <div class="form-group d-flex align-items-stretch">
-                <input type="email" name="email" class="form-control h-100" placeholder="Enter your email" required>
-                <input type="submit" class="btn btn-secondary px-4" value="Subscribe">
-              </div>
-
-              <input type="text" name="_gotcha" style="display:none;"> <!-- honeypot -->
-
-              <div id="newsletter-success" class="alert alert-success mt-3" style="display:none;">
-                ✅ Thank you for subscribing!
-              </div>
-
-              <div id="newsletter-error" class="alert alert-danger mt-3" style="display:none;">
-                ❌ Oops! Something went wrong. Please try again.
-              </div>
+            <form id="newsletter-form" action="https://formspree.io/f/xeokjvdk" method="POST" class="form-subscribe php-email-form">
+                <div class="form-group d-flex align-items-stretch">
+                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your email" required>
+                  <input type="submit" class="btn btn-gold" value="Subscribe">
+                </div>
             </form>
+              
+             <div id="newsletter-success" class="alert alert-success mt-3" style="display: none;">
+                ✅ You’ve successfully subscribed to our newsletter.
+              </div>
+              
+              <div id="newsletter-error" class="alert alert-danger mt-3" style="display: none;">
+                ❌ Subscription failed. Please try again.
+              </div>
+
           </div>
         </div>
       </div>
