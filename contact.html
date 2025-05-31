@@ -112,35 +112,36 @@
         <!-- Contact Form -->
         <div class="col-lg-8">
           <form id="contact-form" action="https://formspree.io/f/mpwrakby" method="POST" novalidate>
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
               </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              <div class="form-group mt-3">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
               </div>
-            </div>
-            <div class="form-group mt-3">
-              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea name="message" class="form-control" placeholder="How can we support your growth?" required></textarea>
-            </div>
+              <div class="form-group mt-3">
+                <textarea name="message" class="form-control" placeholder="How can we support your growth?" required></textarea>
+              </div>
+            
+              <input type="text" name="_gotcha" style="display:none;"> <!-- honeypot -->
+            
+              <div id="contact-success" class="alert alert-success mt-3" style="display:none;">
+                ✅ Thank you! Your message has been sent successfully.
+              </div>
+            
+              <div id="contact-error" class="alert alert-danger mt-3" style="display:none;">
+                ❌ Sorry, something went wrong. Please try again.
+              </div>
+            
+              <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary px-4">Send Message</button>
+              </div>
+            </form>
 
-            <input type="text" name="_gotcha" style="display:none;"> <!-- honeypot -->
-
-            <div id="contact-success" class="alert alert-success mt-3" style="display:none;">
-              ✅ Thank you! Your message has been sent successfully.
-            </div>
-
-            <div id="contact-error" class="alert alert-danger mt-3" style="display:none;">
-              ❌ Sorry, something went wrong. Please try again.
-            </div>
-
-            <div class="text-center mt-3">
-              <button type="submit">Send Message</button>
-            </div>
-          </form>
         </div>
 
       </div>
