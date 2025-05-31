@@ -52,7 +52,7 @@
     </div>
   </header>
 
- <main class="main">
+<main class="main">
 
   <!-- Page Title -->
   <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
@@ -109,6 +109,8 @@
           </div>
         </div>
 
+        <!-- Contact Form -->
+        <div class="col-lg-8">
           <form id="contact-form" action="https://formspree.io/f/mpwrakby" method="POST" novalidate>
             <div class="row">
               <div class="col-md-6 form-group">
@@ -124,21 +126,22 @@
             <div class="form-group mt-3">
               <textarea name="message" class="form-control" placeholder="How can we support your growth?" required></textarea>
             </div>
-          
+
             <input type="text" name="_gotcha" style="display:none;"> <!-- honeypot -->
-          
+
             <div id="contact-success" class="alert alert-success mt-3" style="display:none;">
               ✅ Thank you! Your message has been sent successfully.
             </div>
-          
+
             <div id="contact-error" class="alert alert-danger mt-3" style="display:none;">
               ❌ Sorry, something went wrong. Please try again.
             </div>
-          
+
             <div class="text-center mt-3">
-             <button type="submit" class="btn btn-gold px-4">Send Message</button>
+            <button type="submit" class="btn btn-gold px-4">Send Message</button>
             </div>
           </form>
+        </div>
 
       </div>
     </div>
@@ -221,7 +224,6 @@
   handleFormSubmit('contact-form', 'contact-success', 'contact-error');
   handleFormSubmit('newsletter-form', 'newsletter-success', 'newsletter-error');
 </script>
-
 
   <footer id="footer" class="footer dark-background">
 
