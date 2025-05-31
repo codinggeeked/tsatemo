@@ -26,6 +26,44 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+  /* Container that holds form */
+  #contact-form-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* fill parent height */
+  }
+
+  /* Make form grow to fill container */
+  #contact-form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Make textarea and inputs fill width */
+  #contact-form .form-control {
+    width: 100%;
+  }
+
+  /* Button custom styling */
+  #contact-form button[type="submit"] {
+    background-color: #F2AF2A;
+    border: none;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  #contact-form button[type="submit"]:hover {
+    background-color: #d79e22; /* Slightly darker on hover */
+  }
+
+  /* Optional: space above button */
+  #contact-form .text-center.mt-3 {
+    margin-top: auto; /* push button to bottom */
+  }
+</style>
 
 </head>
 
@@ -110,38 +148,37 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="col-lg-8">
+        <div id="contact-form-container" style="height: 500px;"> <!-- or 100vh or any height -->
           <form id="contact-form" action="https://formspree.io/f/mpwrakby" method="POST" novalidate>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
               </div>
-              <div class="form-group mt-3">
-                <textarea name="message" class="form-control" placeholder="How can we support your growth?" required></textarea>
-              </div>
-            
-              <input type="text" name="_gotcha" style="display:none;"> <!-- honeypot -->
-            
-              <div id="contact-success" class="alert alert-success mt-3" style="display:none;">
-                ✅ Thank you! Your message has been sent successfully.
-              </div>
-            
-              <div id="contact-error" class="alert alert-danger mt-3" style="display:none;">
-                ❌ Sorry, something went wrong. Please try again.
-              </div>
-            
-              <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary px-4">Send Message</button>
-              </div>
-            </form>
-
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3" style="flex-grow:1;">
+              <textarea name="message" class="form-control" placeholder="How can we support your growth?" required style="height: 100%;"></textarea>
+            </div>
+        
+            <input type="text" name="_gotcha" style="display:none;"> <!-- honeypot -->
+        
+            <div id="contact-success" class="alert alert-success mt-3" style="display:none;">
+              ✅ Thank you! Your message has been sent successfully.
+            </div>
+        
+            <div id="contact-error" class="alert alert-danger mt-3" style="display:none;">
+              ❌ Sorry, something went wrong. Please try again.
+            </div>
+        
+            <div class="text-center mt-3">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
         </div>
 
       </div>
