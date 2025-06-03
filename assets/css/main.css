@@ -564,31 +564,40 @@ h6 {
   z-index: 999999;
   overflow: hidden;
   background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.6s ease-out;
 }
 
-#preloader:before {
+#preloader:before,
+#preloader:after {
   content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  position: absolute;
+  border: 4px solid var(--accent-color);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  opacity: 0.6;
+  animation: rf-pulse 2s infinite ease-out;
 }
 
-@keyframes animate-preloader {
+#preloader:after {
+  animation-delay: 1s;
+}
+
+@keyframes rf-pulse {
   0% {
-    transform: rotate(0deg);
+    width: 0px;
+    height: 0px;
+    opacity: 1;
   }
 
   100% {
-    transform: rotate(360deg);
+    width: 120px;
+    height: 120px;
+    opacity: 0;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Scroll Top Button
